@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:gravity="center"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     >
 
@@ -13,13 +13,24 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hand Detection"
+        android:text="Morse Code"
+        android:textAllCaps="false"
+        android:textSize="40dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="150dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recognition"
         android:textAllCaps="false"
         android:textSize="40dp"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginBottom="30dp"
         />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="50dp"
