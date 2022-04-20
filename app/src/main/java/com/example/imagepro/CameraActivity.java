@@ -79,7 +79,7 @@ public class CameraActivity extends Activity implements CameraBridgeViewBase.CvC
             // Now select device and run
             // If you want to know how I made this app watch my tutorial on custom object detection and
             // Real-time object detection android app
-            objectDetectorClass=new objectDetectorClass(getAssets(),"hand_model.tflite","custom_label.txt",300,"Sign_language_model.tflite",96);
+            objectDetectorClass=new objectDetectorClass(getAssets(),"hand_model.tflite","custom_label.txt",300,"morse_model.tflite",96);
             Log.d("MainActivity","Model is successfully loaded");
         }
         catch (IOException e){

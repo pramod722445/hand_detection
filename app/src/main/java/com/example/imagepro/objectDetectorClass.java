@@ -239,9 +239,16 @@ public class  objectDetectorClass {
     private String get_alphabets(float sign_val) {
         String val="";
         if(sign_val>=-0.5 & sign_val<0.5){
-            val="dot";
-        }else{
-            val="dash";
+            val="";
+        }
+        else if(sign_val>=0.7 & sign_val<1.5){
+            val = "-";
+        }
+        else if(sign_val>=1.7 & sign_val<2.5){
+            val = "o";
+        }
+        else if(sign_val>=2.5 & sign_val<3){
+            val = "ooo";
         }
         return val;
     }
