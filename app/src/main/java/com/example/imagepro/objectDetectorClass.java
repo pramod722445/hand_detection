@@ -145,10 +145,6 @@ public class  objectDetectorClass {
 
         // now predict
         interpreter.runForMultipleInputsOutputs(input,output_map);
-        // Before watching this video please watch my previous 2 video of
-        //      1. Loading tensorflow lite model
-        //      2. Predicting object
-        // In this video we will draw boxes and label it with it's name
 
         Object value=output_map.get(0);
         Object Object_class=output_map.get(1);
@@ -238,17 +234,20 @@ public class  objectDetectorClass {
 
     private String get_alphabets(float sign_val) {
         String val="";
-        if(sign_val>=-0.5 & sign_val<0.5){
-            val="";
+        if(sign_val>=-0.5 & sign_val < 0.4){
+            val=""; //blank
         }
-        else if(sign_val>=0.7 & sign_val<1.5){
-            val = "-";
+        else if(sign_val>=0.9 & sign_val<1.4){
+            val = "-"; //dash
         }
-        else if(sign_val>=1.7 & sign_val<2.5){
+        else if(sign_val>=1.9 & sign_val<2.4){
             val = "o";
         }
-        else if(sign_val>=2.5 & sign_val<3){
+        else if(sign_val>=3.1 & sign_val <4){
             val = "ooo";
+        }
+        else if(sign_val>=2.8 & sign_val < 3){
+            val = "---";
         }
         return val;
     }
@@ -328,5 +327,3 @@ public class  objectDetectorClass {
         return byteBuffer;
     }
 }
-// Next video is about drawing box and labeling it
-// If you have any problem please inform me
